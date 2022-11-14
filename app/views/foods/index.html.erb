@@ -1,2 +1,33 @@
 <h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<p>Current User: <strong><%= @cuser.name %></strong></p> 
+
+<div>
+  <%= link_to "Add Food", new_food_path %>
+</div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Food</th>
+        <th>Measurement Unit</th>
+        <th>Unit Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @foods.each_with_index do |food, index| %>
+        <tr>
+          <th><%= index %></th>
+          <th><%= food.name %></th>
+          <th><%= food.measurement_unit %></th>
+          <th><%= food.price %></th>
+          <th>
+            <%= button_to "Delete", food_path(food.id), method: :delete %>
+          </th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
