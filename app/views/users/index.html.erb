@@ -1,0 +1,10 @@
+<h1>Users#index</h1>
+
+<div>
+  <h3> List of all users </h3>
+  <ul>
+    <% @user.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+  </ul>
+</div>

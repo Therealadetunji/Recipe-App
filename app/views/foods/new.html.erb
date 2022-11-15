@@ -1,0 +1,23 @@
+<div>
+  <h1>Add New Food</h1>
+  <%= form_with model: @food, scope: :foods do |f| %>
+
+    <%= f.label :Name %>
+    <%= f.text_field :name, placeholder: "Add Name of Food", required: true %>
+    <br><br>
+
+    <%= f.label :Measurement_Unit %>
+    <%= f.text_field :measurement_unit, placeholder: "Enter Measurement Unit", required: true %>
+    <br><br>
+    
+    <%= f.label :Unit_Price %>
+    <%= f.text_field :price, placeholder: "Unit Price", required: true %>
+    <br><br>
+
+    <%= f.label :Quantity %>
+    <%= f.text_field :quantity, placeholder: "Quantity", required: true %>
+    <br><br>
+
+    <%= f.submit "Add Food" %>
+  <% end %>
+</div>
