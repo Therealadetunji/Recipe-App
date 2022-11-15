@@ -1,2 +1,31 @@
-<h1>Recipe details</h1>
+<h1>
+  <%= @recipe.name %>
+</h1>
 
+<div>
+  <div>
+
+    <div>
+      <p><strong>Preparation Time: </strong> <%= @recipe.preparation_time %> </p>
+      <p><strong>Public: </strong> <%= @recipe.public %> </p>
+    </div>
+
+    <div>
+      <p><strong>Cooking Time: </strong> <%= @recipe.cooking_time %> minutes</p>
+      <p><strong>Steps: </strong></p>
+      <p><%= @recipe.description %> </p>
+    </div>
+
+    <div>
+      <%= link_to "Generate Shopping List" %>
+      <%= link_to "Add Ingredients"  %>
+    </div>
+
+  </div>
+
+  <hr>
+  
+  <div>
+  </div>
+
+</div>
