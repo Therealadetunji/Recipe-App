@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  def index;
+  def index
     # @foods = Food.all
     @foods = current_user.foods
     @cuser = current_user
@@ -7,11 +7,11 @@ class FoodsController < ApplicationController
 
   def show; end
 
-  def new; 
+  def new
     @food = Food.new
   end
 
-  def create; 
+  def create
     @food = current_user.foods.new(food_data)
 
     if @food.save
