@@ -13,6 +13,7 @@
         <th>Food</th>
         <th>Measurement Unit</th>
         <th>Unit Price</th>
+        <th>Quantity</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -23,6 +24,8 @@
           <th><%= food.name %></th>
           <th><%= food.measurement_unit %></th>
           <th><%= food.price %></th>
+          <th><%= food.quantity %></th>
+
           <th>
             <%= button_to "Delete", food_path(food.id), method: :delete %>
           </th>
