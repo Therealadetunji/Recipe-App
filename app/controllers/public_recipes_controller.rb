@@ -4,6 +4,4 @@ class PublicRecipesController < ApplicationController
     @recipes = Recipe.all
     # @recipe_foods = @recipe.recipe_foods.all
   end
-
-
 end
