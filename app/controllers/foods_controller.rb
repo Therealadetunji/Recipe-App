@@ -27,6 +27,7 @@ class FoodsController < ApplicationController
     redirect_to foods_path
   end
 
+
   private
 
   def food_data
