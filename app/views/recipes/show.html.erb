@@ -1,2 +1,53 @@
-<h1>Recipe details</h1>
+<h1>
+  <%= @recipe.name %>
+</h1>
 
+<div>
+  <div>
+
+    <div>
+      <p><strong>Preparation Time: </strong> <%= @recipe.preparation_time %> </p>
+      <p><strong>Public: </strong> <%= @recipe.public %> </p>
+    </div>
+
+    <div>
+      <p><strong>Cooking Time: </strong> <%= @recipe.cooking_time %> minutes</p>
+      <p><strong>Steps: </strong></p>
+      <p><%= @recipe.description %> </p>
+    </div>
+
+    <div>
+      <%= link_to "Generate Shopping List" %>
+      <%= link_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id)  %>
+    </div>
+
+  </div>
+
+  <hr>
+  
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe_foods.each do |recipe_food| %>
+          <tr>
+            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.quantity %></td>
+            <td><%= recipe_food.quantity * recipe_food.food.price %></td>
+            <td>
+              <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete  %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
