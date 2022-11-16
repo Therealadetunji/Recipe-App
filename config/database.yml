@@ -18,8 +18,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: postgres
-  # password: postgres
+  # username: postgres
+  password: postgres
   password: mike
   port: 5432
 
@@ -31,8 +31,8 @@ development:
   <<: *default
   database: Recipe_App_development
   username: postgres
-  # password: postgres
-  password: mike
+  password: postgres
+  # password: mike
   host: localhost
   port: 5432
 
@@ -70,8 +70,8 @@ test:
   <<: *default
   database: Recipe_App_test
   username: postgres
-  password: mike
-  # password: postgres
+  # password: mike
+  password: postgres
   host: localhost
   port: 5432
 # As with config/credentials.yml, you never want to store sensitive information,
