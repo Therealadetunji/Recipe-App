@@ -8,7 +8,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 
 ## ERD
 
-![image](https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/recipe-app/images/recipe_erd_2_members.png?token=GHSAT0AAAAAABOWCPLA57LZBCWNNJLJ6BIEYXJSSPQ)
+![image](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd_2_members.png)
 
 ### Cloning the project
 
