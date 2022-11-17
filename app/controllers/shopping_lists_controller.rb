@@ -5,6 +5,4 @@ class ShoppingListsController < ApplicationController
     @recipes = @user.recipes.all
     @list = []
   end
-
-
 end
