@@ -1,48 +1,52 @@
-<h1>
-  <%= @recipe.name %>
-</h1>
+<h1 class="text-center heading-2"><%= @recipe.name %></h1>
 
-<div>
-  <div>
+<div class="my-2">
+  <div class="card my-3 flex-col gap-5">
 
-    <div>
-      <p><strong>Preparation Time: </strong> <%= @recipe.preparation_time %> </p>
-      <p><strong>Public: </strong> <%= @recipe.public %> </p>
+    <div class="flex justify-between">
+      <p class="card-text"><strong>Preparation Time: </strong> <%= @recipe.preparation_time %> </p>
+      <p class="card-text"><strong>Public: </strong> 
+        <% if @recipe.public %>
+          <input disabled checked type="checkbox" class="form-input-checkbox" />
+        <% else %>
+          <input disabled type="checkbox" class="form-input-checkbox" />
+        <% end %>
+      </p>
     </div>
 
     <div>
-      <p><strong>Cooking Time: </strong> <%= @recipe.cooking_time %> minutes</p>
-      <p><strong>Steps: </strong></p>
-      <p><%= @recipe.description %> </p>
+      <p class="card-text"><strong>Cooking Time: </strong> <%= @recipe.cooking_time %> minutes</p>
+      <p class="card-text"><strong>Steps: </strong></p>
+      <p class="card-text"><%= @recipe.description %> </p>
     </div>
 
-    <div>
-      <%= link_to "Generate Shopping List" %>
-      <%= link_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id)  %>
+    <div class="flex justify-between my-3 mt-14">
+      <div><%= link_to "Generate Shopping List", shopping_lists_path, class: "btn-primary" %></div>
+      <div><%= link_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id), class: "btn-primary"  %></div>
     </div>
 
   </div>
 
   <hr>
   
-  <div>
-    <table>
+  <div class="my-3">
+    <table class="table-main">
       <thead>
         <tr>
-          <th>Food</th>
-          <th>Quantity</th>
-          <th>Value</th>
-          <th>Action</th>
+          <th class="table-th">Food</th>
+          <th class="table-th">Quantity</th>
+          <th class="table-th">Value</th>
+          <th class="table-th">Action</th>
         </tr>
       </thead>
       <tbody>
         <% @recipe_foods.includes([:food]).each do |recipe_food| %>
           <tr>
-            <td><%= recipe_food.food.name %></td>
-            <td><%= recipe_food.quantity %></td>
-            <td><%= recipe_food.quantity * recipe_food.food.price %></td>
-            <td>
-              <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete  %>
+            <td class="table-td"><%= recipe_food.food.name %></td>
+            <td class="table-td"><%= recipe_food.quantity %></td>
+            <td class="table-td"><%= recipe_food.quantity * recipe_food.food.price %></td>
+            <td class="table-td">
+              <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, class: "btn-delete"  %>
             </td>
           </tr>
         <% end %>

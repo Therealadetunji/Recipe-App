@@ -1,31 +1,35 @@
 <div>
-  <h1>Add New Recipe</h1>
-  <%= form_with model: @recipe, scope: :recipes do |f| %>
+  <h3 class="heading-3">Add New Recipe</h3>
+  <%= form_with model: @recipe, class: "form-main", scope: :recipes do |f| %>
 
-    <%= f.label :Recipe_Name %>
-    <%= f.text_field :name, placeholder: "Add Name of Recipe", required: true %>
-    <br><br>
-
-    <%= f.label :Preparation_Time %>
-    <%= f.text_field :preparation_time, placeholder: "Enter Preparation Time", required: true %>
-    <br><br>
-    
-    <%= f.label :Cooking_Time %>
-    <%= f.text_field :cooking_time, placeholder: "Enter Cooking Time", required: true %>
-    <br><br>
-
-    <%= f.label :Description %>
-    <%= f.text_area :description, placeholder: "Enter steps for cooking", required: true %>
-    <br><br>
-
-    <div>
-      <%= f.radio_button :public, true %>
-      <%= f.label :public, 'Public', value: true %>
-
-      <%= f.radio_button :public, false %>
-      <%= f.label :private, 'Private', value: false %>
+    <div class="mb-6">
+      <%= f.label :Recipe_Name, class: "form-label" %>
+      <%= f.text_field :name, placeholder: "Add Name of Recipe", required: true, class: "form-input-text" %>
     </div>
 
-    <%= f.submit "Add Food" %>
+    <div class="mb-6">
+      <%= f.label :Preparation_Time, class: "form-label"  %>
+      <%= f.text_field :preparation_time, placeholder: "Enter Preparation Time", required: true, class: "form-input-text" %>
+    <div>
+    
+    <div class="mb-6">
+      <%= f.label :Cooking_Time, class: "form-label"  %>
+      <%= f.text_field :cooking_time, placeholder: "Enter Cooking Time", required: true, class: "form-input-text" %>
+    </div>
+
+    <div class="mb-6">
+      <%= f.label :Description, class: "form-label"  %>
+      <%= f.text_area :description, placeholder: "Enter steps for cooking", required: true, class: "form-input-text" %>
+    </div>
+
+    <div class="flex gap-3">
+      <%= f.radio_button :public, true %>
+      <%= f.label :public, 'Public', value: true, class: "form-label"  %>
+
+      <%= f.radio_button :public, false %>
+      <%= f.label :private, 'Private', value: false, class: "form-label"  %>
+    </div>
+
+    <%= f.submit "Add Recipe", class: "btn-primary my-3" %>
   <% end %>
 </div>

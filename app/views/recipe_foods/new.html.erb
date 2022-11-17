@@ -1,22 +1,21 @@
-<h1>Add Ingredients for the Recipe</h1>
+<h3 class="heading-3">Add Ingredients for the Recipe</h3>
 
-<div>
-  <%= form_with url: recipe_recipe_foods_path, scope: :recipe_food do |f| %>
+<div class="w-full max-w-md my-5">
+  <%= form_with url: recipe_recipe_foods_path, class: "form-main", scope: :recipe_food do |f| %>
 
-    <div>
-      <%= f.label :Quantity %>
-      <%= f.number_field :quantity, placeholder: 0, required: true %>
+    <div class="mb-6">
+      <%= f.label :Quantity, class: "form-label" %>
+      <%= f.number_field :quantity, placeholder: 0, required: true, class: "form-input-text" %>
+    </div>
+
+    <div class="mb-6">
+      <%= f.label :Food, class: "form-input-label" %>
+      <%= f.collection_select :food_id, @foods, :id, :name, class: "form-input-dropdown" %>
     </div>
     <br>
 
     <div>
-      <%= f.label :Food %>
-      <%= f.collection_select :food_id, @foods, :id, :name %>
-    </div>
-    <br>
-
-    <div>
-      <%= f.submit "Add Ingredients" %>
+      <%= f.submit "Add Ingredients", class: "btn-primary" %>
     </div>
 
   <% end %>

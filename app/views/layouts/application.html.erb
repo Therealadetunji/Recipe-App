@@ -15,13 +15,6 @@
     <%# <p class="notice"><%= notice %></p>
     <%# <p class="alert"><%= alert %></p>
 
-       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-
     <nav>
       <ul class="navbar">
         <li class=" nav-item active">
@@ -44,9 +37,20 @@
         </li>
       </ul>
     </nav>
+
+    <main class="container mt-5 mx-auto">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+    
+      <%= yield %>
+    </main>
     
     
     
-    <%= yield %>
   </body>
 </html>
