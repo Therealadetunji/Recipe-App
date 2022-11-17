@@ -11,3 +11,51 @@
 }
 
 */
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+  }
+}
+
+@layer components {
+  .btn-delete {
+    @apply text-pink-500 border border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+  }
+}
+
+@layer components {
+  .heading-3 {
+    @apply text-4xl font-normal leading-normal mt-0 mb-2 text-slate-800;
+  }
+}
+
+@layer components {
+  .form-label {
+    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .form-input-text {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply my-2 max-w-3xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700;
+  }
+}
+
+@layer components {
+  .card-heading {
+    @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .card-text {
+    @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+  }
+}
