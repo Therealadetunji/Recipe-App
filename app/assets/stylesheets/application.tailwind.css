@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,3 +13,99 @@
 }
 
 */
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-500 text-white active:bg-sky-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+  }
+}
+
+@layer components {
+  .btn-delete {
+    @apply my-2 text-pink-500 border border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+  }
+}
+
+@layer components {
+  .heading-2 {
+    @apply text-5xl font-bold leading-normal mt-0 mb-2 text-slate-800;
+  }
+}
+
+@layer components {
+  .heading-3 {
+    @apply text-4xl font-normal leading-normal mt-0 mb-2 text-slate-800;
+  }
+}
+
+@layer components {
+  .form-main {
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4;
+  }
+}
+
+@layer components {
+  .form-label {
+    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .form-input-text {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+}
+
+@layer components {
+  .form-input-checkbox {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+  }
+}
+
+@layer components {
+  .form-input-dropdown {
+    @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply my-2 max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700;
+  }
+}
+
+@layer components {
+  .card-heading {
+    @apply my-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .card-text {
+    @apply mb-3 font-normal text-gray-700 dark:text-gray-400;
+  }
+}
+
+@layer components {
+  .card-badge {
+    @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2;
+  }
+}
+
+@layer components {
+  .table-main {
+    @apply table-auto border-collapse shadow-lg bg-white;
+  }
+}
+
+@layer components {
+  .table-th {
+    @apply bg-blue-100 border text-left px-8 py-4;
+  }
+}
+
+@layer components {
+  .table-td {
+    @apply border px-8 py-4;
+  }
+}

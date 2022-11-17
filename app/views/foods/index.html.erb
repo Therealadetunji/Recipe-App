@@ -1,34 +1,32 @@
-<h1>Foods#index</h1>
-<p>Current User: <strong><%= @cuser.name %></strong></p> 
+<p>LogIn User: <strong><%= @cuser.name %></strong></p> 
 
-<div>
-  <%= link_to "Add Food", new_food_path %>
+<div class="my-3 float-right">
+  <%= link_to "Add Food", new_food_path, class: "btn-primary" %>
 </div>
 
-<div>
-  <table>
+<div class="my-2 clear-both">
+  <table class="table-main">
     <thead>
       <tr>
-        <th>#</th>
-        <th>Food</th>
-        <th>Measurement Unit</th>
-        <th>Unit Price</th>
-        <th>Quantity</th>
-        <th>Actions</th>
+        <th class="table-th">#</th>
+        <th class="table-th">Food</th>
+        <th class="table-th">Measurement Unit</th>
+        <th class="table-th">Unit Price</th>
+        <th class="table-th">Quantity</th>
+        <th class="table-th">Actions</th>
       </tr>
     </thead>
     <tbody>
       <% @foods.each_with_index do |food, index| %>
         <tr>
-          <th><%= index %></th>
-          <th><%= food.name %></th>
-          <th><%= food.measurement_unit %></th>
-          <th><%= food.price %></th>
-          <th><%= food.quantity %></th>
-
-          <th>
-            <%= button_to "Delete", food_path(food.id), method: :delete %>
-          </th>
+          <td class="table-td"><%= index+1 %></td>
+          <td class="table-td"><%= food.name %></td>
+          <td class="table-td"><%= food.measurement_unit %></td>
+          <td class="table-td"><%= food.price %></td>
+          <td class="table-td"><%= food.quantity %></td>
+          <td class="table-td">
+            <%= button_to "Delete", food_path(food.id), method: :delete, class: "btn-delete" %>
+          </td>
         </tr>
       <% end %>
     </tbody>

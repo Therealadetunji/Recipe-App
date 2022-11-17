@@ -1,46 +1,27 @@
-<div>
-  <h1 class="font-bold text-4xl">ShoppingLists#index</h1>
+<h3 class="heading-3">ShoppingLists#index</h3>
 
- 
-  <% @recipes.each do |recipe|%>
-  <% recipe.recipe_foods.includes([:food]).all.each do |item| %>
-    
-     <% difference = item.quantity - item.food.quantity %>
-     <% if difference > 0 %>
-     <% @list.push([item.food.name, difference, item.food.price])%>
-     <% end %>
-  <% end %>
-  <% end %>
+<div class="flex justify-around my-5">
+  <p>Amount of food items to buy: <span class="card-badge"><%= @list.length %> <span> </p>
+  <p>Total value of food needed: <span class="card-badge">$ <%= @total_amount %></span></p>
 </div>
 
-<% sum = 0 %>
-<% @list.each do |item| %>
-<%sum += item[2]%>
-<% end %>
-
-Amount of food items to buy: <%= @list.length %>  Total value of food needed: <%= sum %>
-
-<table>
+<div class="my-2 clear-both">
+  <table class="table-main">
     <thead>
       <tr>
-        <th>Food</th>
-        <th>Quantity</th>
-        <th>Price</th>
+        <th class="table-th">Food</th>
+        <th class="table-th">Quantity</th>
+        <th class="table-th">Price</th>
       </tr>
     </thead>
     <tbody>
       <% @list.each do |item| %>
         <tr>
-        <td>
-        <%= item[0] %>
-        </td>
-        <td>
-        <%= item[1] %>
-        </td>
-        <td>
-        <%= item[2] %>
-        </td>
+          <td class="table-td"><%= item[0] %></td>
+          <td class="table-td"><%= item[1] %></td>
+          <td class="table-td">$ <%= item[2] %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+</div>
