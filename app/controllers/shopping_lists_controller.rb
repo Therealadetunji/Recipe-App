@@ -8,9 +8,7 @@ class ShoppingListsController < ApplicationController
     @recipes.each do |recipe|
       recipe.recipe_foods.includes([:food]).all.each do |item|
         difference = item.quantity - item.food.quantity
-        if difference > 0
-          @list.push([item.food.name, difference, item.food.price * difference])
-        end
+        @list.push([item.food.name, difference, item.food.price * difference]) if difference.positive?
       end
     end
 
@@ -18,10 +16,5 @@ class ShoppingListsController < ApplicationController
     @list.each do |item|
       @total_amount += item[2]
     end
-
-
   end
-
-  
-
 end
