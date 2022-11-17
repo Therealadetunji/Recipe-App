@@ -1,25 +1,23 @@
-<h1>PublicRecipes</h1>
+<h3 class="heading-3">PublicRecipes</h3>
 
 <div>
+  <% @recipes.includes([:user]).each do |recipe|%>
     
-    <% @recipes.includes([:user]).each do |recipe|%>
-    <h2><%= recipe.name%></h2>
-    <h4> <%= recipe.user.name %> </h4>
+    <div class="card">
+      <h2 class="card-heading"><%= recipe.name%></h2>
+      <h4 class="card-text"> BY: <%= recipe.user.name %> </h4>
 
-    <div>
-    Total items <%= recipe.recipe_foods.includes([:food]).all.length %>
-    <% total = 0 %>
-    <% recipe.recipe_foods.all.each do |item| %>
-    
-    <% total += item.quantity * item.food.price %>
-    
-    <% end %>
-    Total price: <%= total %>
+      <div>
+        <p class="card-badge">Total items: <%= recipe.recipe_foods.includes([:food]).all.length %></p>
+        <% total = 0 %>
+        <% recipe.recipe_foods.all.each do |item| %>
+          <% total += item.quantity * item.food.price %>
+        <% end %>
+        <p class="card-badge">Total price: <%= total %></p>
+      </div>
     </div>
-    <% end %>
     
-
-
+  <% end %>
 </div>
 
 
