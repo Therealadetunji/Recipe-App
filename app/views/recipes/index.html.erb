@@ -1,17 +1,17 @@
-<h1>Recipe List</h1>
+<h3 class="heading-3">Recipe List</h3>
 
-<div>
+<div class="card">
 	<% @recipes.each do |recipe|%>
 		<h2>
-			<%=  link_to  recipe.name, recipe_path(recipe.id) %>
+			<%=  link_to  recipe.name, recipe_path(recipe.id), class: "card-heading" %>
 		</h2>
 
-		<p>	<%= recipe.description%> </p>
+		<p class="card-text">	<%= recipe.description%> </p>
 
-		<%= button_to "REMOVE", recipe_path(recipe.id),  method: :delete %>
+		<%= button_to "REMOVE", recipe_path(recipe.id),  method: :delete, class: "btn-delete" %>
 	<% end %>
 </div>
 
-<div>
-	<%= link_to "Create Recipe", new_recipe_path %>
+<div class="my-5">
+	<%= link_to "Create Recipe", new_recipe_path, class: "btn-primary" %>
 </div>
