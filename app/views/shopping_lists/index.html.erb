@@ -3,7 +3,7 @@
 
  
   <% @recipes.each do |recipe|%>
-  <% recipe.recipe_foods.all.each do |item| %>
+  <% recipe.recipe_foods.includes([:food]).all.each do |item| %>
     
      <% difference = item.quantity - item.food.quantity %>
      <% if difference > 0 %>
