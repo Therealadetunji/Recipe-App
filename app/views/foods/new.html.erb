@@ -1,23 +1,27 @@
-<div>
-  <h1>Add New Food</h1>
-  <%= form_with model: @food, scope: :foods do |f| %>
+<div class="w-full max-w-md">
+  <h3 class="heading-3">Add New Food</h3>
+  <%= form_with model: @food, class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4", scope: :foods do |f| %>
 
-    <%= f.label :Name %>
-    <%= f.text_field :name, placeholder: "Add Name of Food", required: true %>
-    <br><br>
+    <div class="mb-6">
+    <%= f.label :Name, class: "form-label" %>
+    <%= f.text_field :name, placeholder: "Add Name of Food", required: true, class: "form-input-text" %>
+    </div>
 
-    <%= f.label :Measurement_Unit %>
-    <%= f.text_field :measurement_unit, placeholder: "Enter Measurement Unit", required: true %>
-    <br><br>
+    <div class="mb-6">
+    <%= f.label :Measurement_Unit, class: "form-label" %>
+    <%= f.text_field :measurement_unit, placeholder: "Enter Measurement Unit", required: true, class: "form-input-text" %>
+    </div>
     
-    <%= f.label :Unit_Price %>
-    <%= f.text_field :price, placeholder: "Unit Price", required: true %>
-    <br><br>
+    <div class="mb-6">
+    <%= f.label :Unit_Price, class: "form-label" %>
+    <%= f.text_field :price, placeholder: "Unit Price", required: true, class: "form-input-text" %>
+    </div>
 
-    <%= f.label :Quantity %>
-    <%= f.text_field :quantity, placeholder: "Quantity", required: true %>
-    <br><br>
+    <div class="mb-6">
+    <%= f.label :Quantity, class: "form-label" %>
+    <%= f.text_field :quantity, placeholder: "Quantity", required: true, class: "form-input-text" %>
+    </div>
 
-    <%= f.submit "Add Food" %>
+    <%= f.submit "Add Food", class: "btn-primary" %>
   <% end %>
 </div>
