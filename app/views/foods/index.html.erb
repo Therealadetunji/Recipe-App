@@ -12,6 +12,7 @@
         <th class="bg-blue-100 border text-left px-8 py-4">Food</th>
         <th class="bg-blue-100 border text-left px-8 py-4">Measurement Unit</th>
         <th class="bg-blue-100 border text-left px-8 py-4">Unit Price</th>
+        <th class="bg-blue-100 border text-left px-8 py-4">Quantity</th>
         <th class="bg-blue-100 border text-left px-8 py-4">Actions</th>
       </tr>
     </thead>
@@ -22,6 +23,7 @@
           <td class="border px-8 py-4"><%= food.name %></td>
           <td class="border px-8 py-4"><%= food.measurement_unit %></td>
           <td class="border px-8 py-4"><%= food.price %></td>
+          <td class="border px-8 py-4"><%= food.quantity %></td>
           <td class="border px-8 py-4">
             <%= button_to "Delete", food_path(food.id), method: :delete, class: "btn-delete" %>
           </td>

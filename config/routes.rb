@@ -3,9 +3,8 @@ Rails.application.routes.draw do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :users
-  resources :foods 
-  resources :public_recipes
+  resources :users, :foods, :public_recipes, :shopping_lists
+  
 
   resources :recipes do
     resources :recipe_foods, only: [:new, :create, :destroy]
