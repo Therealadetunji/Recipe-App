@@ -17,4 +17,6 @@ class ShoppingListsController < ApplicationController
       @total_amount += item[2]
     end
   end
+
+  def show; end
 end

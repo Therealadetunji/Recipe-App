@@ -1,24 +1,82 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Recipe App
 
-Things you may want to cover:
+### Description
 
-* Ruby version
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
 
-* System dependencies
+## ERD
 
-* Configuration
+![image](https://raw.githubusercontent.com/microverseinc/curriculum-rails/main/recipe-app/images/recipe_erd_2_members.png?token=GHSAT0AAAAAABOWCPLA57LZBCWNNJLJ6BIEYXJSSPQ)
 
-* Database creation
+### Cloning the project
 
-* Database initialization
+git clone git@github.com:Therealadetunji/Recipe-App.git <Your-Build-Directory>
 
-* How to run the test suite
+```
+- cd Recipe-app
+- rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built with
 
-* Deployment instructions
+- Ruby 3.1.2 on Rails 7.0.3.1
+- PostgreSQL
 
-* ...
+## Prerequisites
+
+Vscode or anyother
+Setup
+
+## Install
+
+    Ruby
+    Rails
+
+### Development Database
+
+# Create the database
+
+rake db:create
+
+# Create database Migration
+
+rails db:migrate
+
+```
+### Run
+
+rails s
+```
+
+## Run tests
+
+```sh
+bundle install
+rspec
+```
+
+## Author
+
+👤 **Ghazanfar Ali**
+
+- GitHub: [@gak92](https://github.com/gak92)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghazanfar-ali-9a4998a/)
+
+👤 **Michael Adetunji**
+
+- GitHub: [@Therealadetunji](https://github.com/Therealadetunji)
+
+## :handshake: Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/Therealadetunji/Recipe-App/issues).
+
+## Show your support
+
+Give a :star:️ if you like this project!
+
+## :memo: License
+
+This project is [MIT](./MIT.md) licensed.
