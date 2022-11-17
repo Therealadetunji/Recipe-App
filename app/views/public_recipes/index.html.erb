@@ -2,7 +2,7 @@
 
 <div>
   <% @recipes.includes([:user]).each do |recipe|%>
-    
+    <% if recipe.public? || @user.id == recipe.user.id  %>
     <div class="card">
       <h2 class="card-heading"><%= recipe.name%></h2>
       <h4 class="card-text"> BY: <%= recipe.user.name %> </h4>
@@ -16,7 +16,7 @@
         <p class="card-badge">Total price: <%= total %></p>
       </div>
     </div>
-    
+    <% end %>
   <% end %>
 </div>
 
