@@ -38,16 +38,16 @@ Setup
 
 # Create the database
 
-rake db:create
+rails db:create
 
 # Create database Migration
 
 rails db:migrate
 
 ```
-### Run
+### Run (We are using tailwind so run this command to start web server and to build css file)
 
-rails s
+./bin/dev
 ```
 
 ## Run tests
