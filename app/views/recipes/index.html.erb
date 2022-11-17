@@ -1,14 +1,18 @@
 <h3 class="heading-3">Recipe List</h3>
 
-<div class="card">
+<div class="my-2">
 	<% @recipes.each do |recipe|%>
-		<h2>
-			<%=  link_to  recipe.name, recipe_path(recipe.id), class: "card-heading" %>
-		</h2>
 
-		<p class="card-text">	<%= recipe.description%> </p>
-
-		<%= button_to "REMOVE", recipe_path(recipe.id),  method: :delete, class: "btn-delete" %>
+		<div class="card flex">
+			<div class="flex-none w-48">
+				<h2 class="my-5"><%=  link_to  recipe.name, recipe_path(recipe.id), class: "card-heading" %></h2>
+				<%= button_to "REMOVE", recipe_path(recipe.id),  method: :delete, class: "btn-delete" %>
+			</div>
+			<div class="flex-auto">
+				<p class="card-text">	<%= recipe.description%> </p>
+			</div>
+		</div>
+		
 	<% end %>
 </div>
 
