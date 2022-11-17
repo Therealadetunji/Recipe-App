@@ -5,26 +5,26 @@
 </div>
 
 <div class="my-2 clear-both">
-  <table class="table-auto border-collapse shadow-lg bg-white">
+  <table class="table-main">
     <thead>
       <tr>
-        <th class="bg-blue-100 border text-left px-8 py-4">#</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Food</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Measurement Unit</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Unit Price</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Quantity</th>
-        <th class="bg-blue-100 border text-left px-8 py-4">Actions</th>
+        <th class="table-th">#</th>
+        <th class="table-th">Food</th>
+        <th class="table-th">Measurement Unit</th>
+        <th class="table-th">Unit Price</th>
+        <th class="table-th">Quantity</th>
+        <th class="table-th">Actions</th>
       </tr>
     </thead>
     <tbody>
       <% @foods.each_with_index do |food, index| %>
         <tr>
-          <td class="border px-8 py-4"><%= index %></td>
-          <td class="border px-8 py-4"><%= food.name %></td>
-          <td class="border px-8 py-4"><%= food.measurement_unit %></td>
-          <td class="border px-8 py-4"><%= food.price %></td>
-          <td class="border px-8 py-4"><%= food.quantity %></td>
-          <td class="border px-8 py-4">
+          <td class="table-td"><%= index+1 %></td>
+          <td class="table-td"><%= food.name %></td>
+          <td class="table-td"><%= food.measurement_unit %></td>
+          <td class="table-td"><%= food.price %></td>
+          <td class="table-td"><%= food.quantity %></td>
+          <td class="table-td">
             <%= button_to "Delete", food_path(food.id), method: :delete, class: "btn-delete" %>
           </td>
         </tr>
