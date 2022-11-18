@@ -1,28 +1,28 @@
 <div>
-  <h3 class="heading-3">Add New Recipe</h3>
-  <%= form_with model: @recipe, class: "form-main", scope: :recipes do |f| %>
+  <h3 class="h3">Add New Recipe</h3>
+  <%= form_with model: @recipe, class: "form", scope: :recipes do |f| %>
 
-    <div class="mb-6">
+    <div class="mb-3">
       <%= f.label :Recipe_Name, class: "form-label" %>
-      <%= f.text_field :name, placeholder: "Add Name of Recipe", required: true, class: "form-input-text" %>
+      <%= f.text_field :name, placeholder: "Add Name of Recipe", required: true, class: "form-control" %>
     </div>
 
-    <div class="mb-6">
+    <div class="mb-3">
       <%= f.label :Preparation_Time, class: "form-label"  %>
-      <%= f.text_field :preparation_time, placeholder: "Enter Preparation Time", required: true, class: "form-input-text" %>
+      <%= f.text_field :preparation_time, placeholder: "Enter Preparation Time", required: true, class: "form-control" %>
     <div>
     
-    <div class="mb-6">
+    <div class="mb-3">
       <%= f.label :Cooking_Time, class: "form-label"  %>
-      <%= f.text_field :cooking_time, placeholder: "Enter Cooking Time", required: true, class: "form-input-text" %>
+      <%= f.text_field :cooking_time, placeholder: "Enter Cooking Time", required: true, class: "form-control" %>
     </div>
 
-    <div class="mb-6">
+    <div class="mb-3">
       <%= f.label :Description, class: "form-label"  %>
-      <%= f.text_area :description, placeholder: "Enter steps for cooking", required: true, class: "form-input-text" %>
+      <%= f.text_area :description, placeholder: "Enter steps for cooking", required: true, class: "form-control" %>
     </div>
 
-    <div class="flex gap-3">
+    <div class="d-flex gap-3">
       <%= f.radio_button :public, true %>
       <%= f.label :public, 'Public', value: true, class: "form-label"  %>
 
@@ -30,6 +30,8 @@
       <%= f.label :private, 'Private', value: false, class: "form-label"  %>
     </div>
 
-    <%= f.submit "Add Recipe", class: "btn-primary my-3" %>
+    <div class="my-3">
+      <%= f.submit "Add Recipe", class: "btn btn-primary" %>
+    </div>
   <% end %>
 </div>

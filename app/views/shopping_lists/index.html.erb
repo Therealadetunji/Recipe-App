@@ -1,25 +1,25 @@
-<h3 class="heading-3">ShoppingLists</h3>
+<h3 class="h3">ShoppingLists</h3>
 
-<div class="flex justify-around my-5">
-  <p>Amount of food items to buy: <span class="card-badge"><%= @list.length %> <span> </p>
-  <p>Total value of food needed: <span class="card-badge">$ <%= @total_amount %></span></p>
+<div class="d-flex justify-content-around my-5">
+  <p>Amount of food items to buy: <span class="badge bg-secondary"><%= @list.length %> <span> </p>
+  <p>Total value of food needed: <span class="badge bg-secondary">$ <%= @total_amount %></span></p>
 </div>
 
-<div class="my-2 clear-both">
-  <table class="table-main">
+<div class="my-2">
+  <table class="table">
     <thead>
       <tr>
-        <th class="table-th">Food</th>
-        <th class="table-th">Quantity</th>
-        <th class="table-th">Price</th>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
       <% @list.each do |item| %>
         <tr>
-          <td class="table-td"><%= item[0] %></td>
-          <td class="table-td"><%= item[1] %></td>
-          <td class="table-td">$ <%= item[2] %></td>
+          <td><%= item[0] %></td>
+          <td><%= item[1] %></td>
+          <td>$ <%= item[2] %></td>
         </tr>
       <% end %>
     </tbody>
