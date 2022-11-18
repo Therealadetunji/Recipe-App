@@ -1,0 +1,57 @@
+<h1 class="h2"><%= @recipe.name %></h1>
+
+<div class="my-2">
+  <div class="card my-3 p-3 flex-col">
+
+    <div class="d-flex justify-content-between">
+      <p class="card-text"><strong>Preparation Time: </strong> <%= @recipe.preparation_time %> </p>
+      <p class="card-text"><strong>Public: </strong> 
+        <% if @recipe.public %>
+          <input disabled checked type="checkbox" class="form-check-input" />
+        <% else %>
+          <input disabled type="checkbox" class="form-check-input" />
+        <% end %>
+      </p>
+    </div>
+
+    <div>
+      <p class="card-text"><strong>Cooking Time: </strong> <%= @recipe.cooking_time %> minutes</p>
+      <p class="card-text"><strong>Steps: </strong></p>
+      <p class="card-text"><%= @recipe.description %> </p>
+    </div>
+
+    <div class="d-flex justify-content-between my-3 mt-14">
+      <div><%= link_to "Generate Shopping List", shopping_lists_path, class: "btn btn-primary" %></div>
+      <div><%= link_to "Add Ingredients", new_recipe_recipe_food_path(@recipe.id), class: "btn btn-primary"  %></div>
+    </div>
+
+  </div>
+
+  <hr>
+  
+  <div class="my-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe_foods.includes([:food]).each do |recipe_food| %>
+          <tr>
+            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.quantity %></td>
+            <td><%= recipe_food.quantity * recipe_food.food.price %></td>
+            <td>
+              <%= button_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, class: "btn btn-danger"  %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

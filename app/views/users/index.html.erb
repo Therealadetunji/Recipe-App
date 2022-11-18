@@ -1,0 +1,8 @@
+<div>
+  <h3 class="heading-3"> List of all users </h3>
+  <ul>
+    <% @user.each do |user| %>
+      <li class="text-base font-light leading-relaxed mt-0 mb-4 text-slate-800 list-disc"><%= user.name %></li>
+    <% end %>
+  </ul>
+</div>

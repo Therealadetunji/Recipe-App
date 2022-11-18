@@ -1,75 +1,82 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe App
 
-> Description the project.
+### Description
 
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
 
-## Built With
+## ERD
 
-- Major languages
-- Frameworks
-- Technologies used
+![image](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd_2_members.png)
 
-## Live Demo (if available)
+### Cloning the project
 
-[Live Demo Link](https://livedemo.com)
+git clone git@github.com:Therealadetunji/Recipe-App.git <Your-Build-Directory>
 
+```
+- cd Recipe-app
+- rails s
+```
 
-## Getting Started
+## Built with
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- Ruby 3.1.2 on Rails 7.0.3.1
+- PostgreSQL
 
+## Prerequisites
 
-To get a local copy up and running follow these simple example steps.
+Vscode or anyother
+Setup
 
-### Prerequisites
+## Install
 
-### Setup
+    Ruby
+    Rails
 
-### Install
+### Development Database
 
-### Usage
+# Create the database
 
-### Run tests
+rails db:create
 
-### Deployment
+# Create database Migration
 
+rails db:migrate
 
+```
+### Run
 
-## Authors
+rails s
+```
 
-👤 **Author1**
+## Run tests
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+```sh
+bundle install
+rspec
+```
 
-👤 **Author2**
+## Author
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Ghazanfar Ali**
 
-## 🤝 Contributing
+- GitHub: [@gak92](https://github.com/gak92)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghazanfar-ali-9a4998a/)
+
+👤 **Michael Adetunji**
+
+- GitHub: [@Therealadetunji](https://github.com/Therealadetunji)
+
+## :handshake: Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Therealadetunji/Recipe-App/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a :star:️ if you like this project!
 
-## Acknowledgments
+## :memo: License
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
