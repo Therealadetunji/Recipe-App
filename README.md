@@ -45,9 +45,9 @@ rails db:create
 rails db:migrate
 
 ```
-### Run (We are using tailwind so run this command to start web server and to build css file)
+### Run
 
-./bin/dev
+rails s
 ```
 
 ## Run tests
